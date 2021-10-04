@@ -1,0 +1,19 @@
+name: CI
+on: create
+
+jobs:
+  
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Gist
+        uses: exuanbo/actions-deploy-gist@v1.0.4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          gist_id: 9a7b3990751df4c312c8e9ace05a8faf
+          gist_file_name: sw.html
+          file_path: ./dist/index.html
