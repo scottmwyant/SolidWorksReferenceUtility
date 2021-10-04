@@ -10,17 +10,22 @@
             width: 630px;
             margin-left: auto;
             margin-right: auto;
+            font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono
+        }
+        div.tree-root{
+            font-weight: bold
+        }
+        span.tree-branch-lines{
+            color: darkgrey
         }
     </style>
     <title>Document</title>
 </head>
 
 <body>
-    <div id="tree">
-        <div id="tree-root"></div>
-        <div id="tree-body"></div>
-    </div>
+    <div id="tree"></div>
     <script src="../node_modules/treeify/treeify.js"></script>
+    <script>var data = {};</script>
     <script src="./index.js"></script>
 </body>
 
